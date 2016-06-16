@@ -1,8 +1,71 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aYD-qn-0Nx">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Epoch View Controller-->
+        <scene sceneID="Vhg-fs-Jwu">
+            <objects>
+                <viewController id="aYD-qn-0Nx" customClass="FISEpochViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ff0-I6-9dg"/>
+                        <viewControllerLayoutGuide type="bottom" id="e67-lo-HSg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x89-wg-9Ho">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0BS-gz-ONf">
+                                <rect key="frame" x="138" y="447" width="98" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="epoch button"/>
+                                <state key="normal" title="Epoch Button!"/>
+                                <connections>
+                                    <action selector="epochButtonDidTouch" destination="aYD-qn-0Nx" eventType="touchUpInside" id="mxX-vH-r25"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkC-4B-6UN">
+                                <rect key="frame" x="66" y="136" width="242" height="21"/>
+                                <accessibility key="accessibilityConfiguration" label="epoch label"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0BS-gz-ONf" firstAttribute="leading" secondItem="x89-wg-9Ho" secondAttribute="leadingMargin" constant="118" id="0ab-zl-eiC"/>
+                            <constraint firstItem="dkC-4B-6UN" firstAttribute="centerX" secondItem="x89-wg-9Ho" secondAttribute="centerX" id="222-1I-ePh"/>
+                            <constraint firstItem="0BS-gz-ONf" firstAttribute="top" secondItem="dkC-4B-6UN" secondAttribute="bottom" constant="290" id="RXl-we-5ZS"/>
+                            <constraint firstItem="e67-lo-HSg" firstAttribute="top" secondItem="dkC-4B-6UN" secondAttribute="bottom" constant="506" id="SiE-eP-DOe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dkC-4B-6UN" secondAttribute="trailing" constant="147" id="VeQ-sf-w95"/>
+                            <constraint firstItem="dkC-4B-6UN" firstAttribute="top" secondItem="ff0-I6-9dg" secondAttribute="bottom" constant="116" id="ccd-EO-Pl8"/>
+                            <constraint firstItem="0BS-gz-ONf" firstAttribute="top" secondItem="dkC-4B-6UN" secondAttribute="bottom" constant="290" id="eak-kh-1R9"/>
+                            <constraint firstItem="e67-lo-HSg" firstAttribute="top" secondItem="0BS-gz-ONf" secondAttribute="bottom" constant="190" id="gKO-5l-Zy9"/>
+                            <constraint firstItem="dkC-4B-6UN" firstAttribute="leading" secondItem="x89-wg-9Ho" secondAttribute="leadingMargin" constant="46" id="hAD-7r-QYe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0BS-gz-ONf" secondAttribute="trailing" constant="119" id="idh-TG-09d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dkC-4B-6UN" secondAttribute="trailing" constant="47" id="rXw-8f-jzx"/>
+                            <constraint firstItem="dkC-4B-6UN" firstAttribute="leading" secondItem="x89-wg-9Ho" secondAttribute="leadingMargin" constant="146" id="slj-dn-dQt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="222-1I-ePh"/>
+                                <exclude reference="VeQ-sf-w95"/>
+                                <exclude reference="slj-dn-dQt"/>
+                                <exclude reference="SiE-eP-DOe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="epochLabel" destination="dkC-4B-6UN" id="NCR-Qp-iK2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wR-EH-fdv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59.5" y="287.5"/>
+        </scene>
+    </scenes>
 </document>
